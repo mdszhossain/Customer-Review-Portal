@@ -1,0 +1,18 @@
+* {
+    font-family: "Roboto Slab", serif;
+}
+
+.review-star-box {
+    border-bottom: 1px solid #e2e2e2;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+.feedback-box {
+    border: none;
+    border: 1px solid rgb(206, 206, 206);
+}
+
+.input-bg {
+    border: none;
+    border: 1px solid rgb(206, 206, 206);
+}
