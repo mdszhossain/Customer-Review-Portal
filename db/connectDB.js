@@ -7,4 +7,4 @@ const connectDB = async () => {
     console.log("Error Appeared during DB Connection");
   }
 };
-module.export = { connectDB };
+module.exports = { connectDB };

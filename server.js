@@ -11,6 +11,9 @@ const path = require("path");
 const session = require("express-session");
 const passport = require("passport");
 const LocalStrategy = require("passport-local");
+const ExpressError = require("./utils/ExpressError");
+const {connectDB} = require("./db/connectDB");
+
 
 // using middlewares
 app.set("view engine", "ejs");
@@ -32,6 +35,29 @@ app.use(
     },
   }),
 );
+
+// db connection
+connectDB();
+
+// routes
+const reviewerRouter = require("./routes/reviewerRouter");
+
+
+// using routes
+app.use("/crp", reviewerRouter);
+
+
+
+// error handling middleware
+
+app.use((req, res, next) => {
+  throw new ExpressError(404, "Page Not Found");
+})
+
+app.use((err, req, res, next) => {
+  const { status = 500, message = "Some Error" } = err;
+  res.status(status).send(message);
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running`);
