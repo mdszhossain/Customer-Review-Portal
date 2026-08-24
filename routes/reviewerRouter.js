@@ -2,9 +2,13 @@ const express = require("express");
 const router = express.Router();
 const reviewFormController = require("../controller/reviewFormController");
 const wrapAsync = require("../utils/wrapAsync");
+const { validateReview } = require("../middlewares/validateReview");
 
 router.get("/reviewForm", wrapAsync(reviewFormController.renderReviewForm));
-router.get("/reviewForm/success", wrapAsync(reviewFormController.renderSuccessPage));
-router.post("/reviewForm", wrapAsync(reviewFormController.submitReview));
+router.post(
+  "/reviewForm",
+  validateReview,
+  wrapAsync(reviewFormController.submitReview),
+);
 
 module.exports = router;
