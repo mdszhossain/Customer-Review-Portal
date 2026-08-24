@@ -5,29 +5,29 @@
         <div class="manager-contact text-white text-xl p-4">Contact Manager: +8801766032333</div>
     </div>
     <div class="h-screen bg-[#341C13] flex justify-center items-center">
-        <form action="" class="review-form h-150 w-150 bg-[#FFFAF7] rounded-2xl">
+        <form action="/crp/reviewForm" method="POST" class="review-form h-150 w-150 bg-[#FFFAF7] rounded-2xl">
             <div class="review-star-box text-center p-5 bg-[#FEF4EE] rounded-2xl">
                 <h4>Rate your overall experience</h4>
                 <div class="rating mt-5">
-                    <input type="radio" value="1" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="1 star" />
-                    <input type="radio" value="2" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="2 star" />
-                    <input type="radio" value="3" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="3 star" />
-                    <input type="radio" value="4" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="4 star" />
-                    <input type="radio" value="5" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="5 star" />
+                    <input type="radio" value="1" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="1 star" checked="checked"/>
+                    <input type="radio" value="2" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="2 star" />
+                    <input type="radio" value="3" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="3 star" />
+                    <input type="radio" value="4" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="4 star" />
+                    <input type="radio" value="5" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="5 star" />
                 </div>
             </div>
             <div class="px-10 mt-5">
                 <label class=" text-center" for="feedback">Your Feedback</label>
-                <textarea class="feedback-box mt-5 w-full rounded-xl p-3 bg-[#F9F5F2]" name="" id="feedback" rows="5" placeholder="Tell us about your experience"></textarea>
+                <textarea class="feedback-box mt-5 w-full rounded-xl p-3 bg-[#F9F5F2]" name="message" id="feedback" rows="5" placeholder="Tell us about your experience" required></textarea>
             </div>
             <div class="name-phone-container px-10 flex justify-between items-center mt-5">
                 <div class="input-container">
                     <label for="name">Name</label><br>
-                    <input id="name" class="p-3 rounded-xl bg-[#F9F5F2] input-bg" type="text" placeholder="Enter your name">
+                    <input id="name" name="customerName" class="p-3 rounded-xl bg-[#F9F5F2] input-bg" type="text" placeholder="Enter your name" required>
                 </div>
                 <div class="input-container">
                     <label for="phone">Phone</label><br>
-                    <input id="phone" class="p-3 rounded-xl bg-[#F9F5F2] input-bg" type="text" placeholder="Enter your phone number">
+                    <input id="phone" name="phone" class="p-3 rounded-xl bg-[#F9F5F2] input-bg" type="text" placeholder="Enter your phone number" required>
                 </div>
             </div>
             <div class="px-10 mt-10">
