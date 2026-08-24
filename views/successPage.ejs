@@ -4,11 +4,11 @@
         <div class="h-100 w-100 bg-white rounded-xl flex justify-center items-center">
             <div class="w-full">
                 <div class="rating mt-5 w-full justify-center mb-5">
-                    <input type="radio" value="1" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="1 star" />
-                    <input type="radio" value="2" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="2 star" />
-                    <input type="radio" value="3" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="3 star" />
-                    <input type="radio" value="4" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="4 star" />
-                    <input type="radio" value="5" name="rating-star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="5 star" />
+                    <input type="radio" value="1" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="1 star" <%= typeof star !== "undefined" && String(star) === "1" ? "checked" : "" %> />
+                    <input type="radio" value="2" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="2 star" <%= typeof star !== "undefined" && String(star) === "2" ? "checked" : "" %> />
+                    <input type="radio" value="3" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="3 star" <%= typeof star !== "undefined" && String(star) === "3" ? "checked" : "" %> />
+                    <input type="radio" value="4" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="4 star" <%= typeof star !== "undefined" && String(star) === "4" ? "checked" : "" %> />
+                    <input type="radio" value="5" name="star" class="mask mask-star-2 bg-orange-400 w-8 h-8" aria-label="5 star" <%= typeof star !== "undefined" && String(star) === "5" ? "checked" : "" %> />
                 </div>
                 <p class="w-10/12 mb-2 m-auto text-center text-4xl text-[#E85D26]">Thank You!</p>
                 <p class="w-10/12 mb-2 m-auto text-center text-xl">Your review is precious to us</p>

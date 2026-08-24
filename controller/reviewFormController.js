@@ -10,5 +10,6 @@ module.exports.submitReview = async(req, res) => {
     const {star, message, customerName, phone} = req.body;
     const newReview = new Review({star, message, customerName, phone});
     await newReview.save();
-    res.redirect("/crp/reviewForm/success");
+    // res.redirect("/crp/reviewForm/success");
+    res.render("successPage.ejs", {star});
 }
