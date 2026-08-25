@@ -13,6 +13,7 @@ const passport = require("passport");
 const LocalStrategy = require("passport-local");
 const ExpressError = require("./utils/ExpressError");
 const {connectDB} = require("./db/connectDB");
+const User = require("./models/userModel");
 
 
 // using middlewares
@@ -36,17 +37,26 @@ app.use(
   }),
 );
 
+// using passport for authentication and authorization
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 // db connection
 connectDB();
 
 // routes
 const reviewerRouter = require("./routes/reviewerRouter");
 const adminRouter = require("./routes/adminRouter");
+const userRouter = require("./routes/userRouter");
 
 
 // using routes
 app.use("/crp", reviewerRouter);
 app.use("/crp", adminRouter);
+app.use("/crp", userRouter);
 
 
 
