@@ -1,20 +1,20 @@
 <%- layout("./layout/boilerplate.ejs") %>
 <section>
     <div class="h-screen bg-[#341C13] flex justify-center items-center">
-        <form action="" class="w-150 bg-[#FFFAF7] rounded-xl">
+        <form action="" class="auth-outerform w-150 bg-[#FFFAF7] rounded-xl">
             <div>
                 <div class="text-[#E85D26] font-bold text-center mt-5 text-xl"><i class="fa-brands fa-yelp"></i>C-R-P</div>
                 <div class="text-center text-md">Customer Review Admin Portal</div>
                 <div class="text-xl text-center font-bold text-[#e85d26] my-3">Signin</div>
             </div>
-            <div class="w-7/12 m-auto">
+            <div class="auth-innerdiv w-7/12 m-auto">
                 <div class="mb-3">
                     <label for="username"><b>Username:</b></label> <br>
-                    <input class="w-full p-2 rounded-md" type="text" name="username" id="username" placeholder="Enter username">
+                    <input class="auth-input bg-[#F9F5F2] w-full p-2 rounded-md" type="text" name="username" id="username" placeholder="Enter username" required>
                 </div>
                 <div class="mb-3">
                     <label for="password"><b>Password:</b></label> <br>
-                    <input class="w-full p-2 rounded-md" type="password" name="password" id="password" placeholder="Enter password">
+                    <input class="auth-input bg-[#F9F5F2] w-full p-2 rounded-md" type="password" name="password" id="password" placeholder="Enter password" required>
                 </div>
                 <button class="w-full text-white bg-[#e85d26] p-2 rounded-xl mt-3"><i class="fa-solid fa-arrow-right-to-bracket"></i> Signin</button>
                 <hr class="mt-5">

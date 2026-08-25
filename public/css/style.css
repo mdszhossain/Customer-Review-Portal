@@ -17,6 +17,21 @@
     border: 1px solid rgb(206, 206, 206);
 }
 
+/* signup signin styles */
+.auth-input {
+    border: none;
+    border: 1px solid rgb(211, 211, 211);
+}
+.auth-input:focus {
+    outline: none;
+    border-color: #E85D26;
+}
+
+/* navbar styles */
+.create-shop-btn {
+    border: 1px solid rgb(99, 99, 99);
+}
+
 @media (min-width: 350px) and (max-width: 650px) {
     .review-form-nav {
         flex-direction: column;
@@ -45,5 +60,24 @@
     .manager-contact {
         font-size: 1rem;
         margin-top: 5px;
+    }
+
+    /* signup and signin styles */
+    .auth-outerform {
+        width: 90%;
+        margin: auto;
+    }
+    .auth-innerdiv {
+        width: 80%;
+    }
+    .navbar-div {
+        flex-direction: column;
+        text-align: center;
+    }
+    .nav-btns {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        margin-top: 20px;
     }
 }
