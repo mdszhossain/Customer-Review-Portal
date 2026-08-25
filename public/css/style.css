@@ -39,4 +39,11 @@
     .name-phone-container input {
         width: 100% ;
     }
+    .copyright-text {
+        margin-top: 20px;
+    }
+    .manager-contact {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
 }

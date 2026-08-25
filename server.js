@@ -41,10 +41,12 @@ connectDB();
 
 // routes
 const reviewerRouter = require("./routes/reviewerRouter");
+const adminRouter = require("./routes/adminRouter");
 
 
 // using routes
 app.use("/crp", reviewerRouter);
+app.use("/crp", adminRouter);
 
 
 

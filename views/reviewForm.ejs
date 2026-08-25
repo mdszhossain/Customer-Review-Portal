@@ -1,10 +1,10 @@
 <%- layout("./layout/boilerplate.ejs") %>
 <section>
-    <div class="review-form-nav flex bg-[#341C13] justify-between items-center">
-        <div class="p-4 form-nav-logo bg-[#341C13] text-white text-2xl font-bold"><i class="fa-brands fa-yelp"></i>C-R-P</div>
-        <div class="manager-contact text-white text-xl p-4">Contact Manager: +8801766032333</div>
-    </div>
-    <div class="h-screen bg-[#341C13] flex justify-center items-center">
+    <div class="h-screen bg-[#341C13] flex flex-col gap-5 justify-center items-center">
+        <div class="review-form-nav p-4 flex bg-[#341C13] justify-center flex-col items-center">
+            <div class=" form-nav-logo bg-[#341C13] text-white text-2xl font-bold"><i class="fa-brands fa-yelp"></i>C-R-P</div>
+            <div class="manager-contact text-white text-xl">Contact Manager: +8801766032333</div>
+        </div>
         <form action="/crp/reviewForm" method="POST" class="review-form h-150 w-150 bg-[#FFFAF7] rounded-2xl">
             <div class="review-star-box text-center p-5 bg-[#FEF4EE] rounded-2xl">
                 <h4>Rate your overall experience</h4>
@@ -33,7 +33,7 @@
             <div class="px-10 mt-10">
                 <button class="w-full text-white bg-[#E85D26] rounded-xl p-3">Submit Feedback</button>
             </div>
-            <p class="text-sm text-center mt-10 text-[#565656]">&copy; powered by C-R-P</p>
+            <p class="copyright-text text-sm text-center mt-10 text-[#565656]">&copy; powered by C-R-P</p>
         </form>
     </div>
 </section>
