@@ -7,5 +7,6 @@ const { validateSignup } = require("../middlewares/validateSignup");
 
 router.get("/signup", wrapAsync(userController.renderSignupPage));
 router.get("/signin", wrapAsync(userController.renderSigninPage));
+router.post("/signup", validateSignup, wrapAsync(userController.registerUser));
 
 module.exports = router;
