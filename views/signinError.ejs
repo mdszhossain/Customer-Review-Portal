@@ -1,0 +1,16 @@
+<%- layout("./layout/boilerplate.ejs") %>
+<section>
+    <div class="h-screen bg-[#341C13] flex justify-center items-center">
+        <form action="/crp/signin" method="GET" class="auth-outerform w-100 bg-[#FFFAF7] rounded-xl">
+            <div>
+                <div class="text-[#E85D26] font-bold text-center mt-5 text-xl"><i class="fa-brands fa-yelp"></i>C-R-P</div>
+                <div class="text-center text-md">Customer Review Admin Portal</div>
+                <div class="text-center text-6xl mt-5 text-[#E85D26]"><i class="fa-solid fa-triangle-exclamation text-red-500"></i></div>
+                <div class="text-xl text-center font-bold text-[#e85d26] my-3 text-red-500">Wrong Username or Password</div>
+            </div>
+            <div class="auth-innerdiv w-7/12 m-auto mb-5">
+                <button class="w-full text-white bg-[#e85d26] p-2 rounded-xl mt-3">Try Again</button>
+            </div>
+        </form>
+    </div>
+</section>

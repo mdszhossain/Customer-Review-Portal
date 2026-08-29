@@ -14,3 +14,9 @@ module.exports.registerUser = async (req, res) => {
   const registeredUser = await User.register(newUser, password);
   res.render("signupSuccess.ejs");
 };
+module.exports.signinUser = async(req, res) => {
+  res.redirect("/crp/adminPanel");
+}
+module.exports.signinError = async(req, res) => {
+  res.render("signinError.ejs");
+}
