@@ -1,0 +1,17 @@
+<%- layout("./layout/boilerplate.ejs") %>
+<%- include("./includes/navbar.ejs") %>
+<section class="bg-[#FFFAF7] h-screen">
+    <section class="review-page-nav bg-white shadow">
+        <div class="w-11/12 m-auto flex justify-between items-center pr-6">
+            <div class="review-nav-left flex items-center p-6 gap-5">
+                <form action="/crp/adminPanel" method="GET"><button class="py-2 px-4 bg-[#E85D26] rounded-xl text-white"><i class="fa-solid fa-arrow-left"></i> Back</button></form>
+                <div>
+                    <p class="text-xl font-bold"><%= shop.shopname %></p>
+                    <p class="text-sm"><%= shop.shoplocation %>n</p>
+                </div>
+            </div>
+            <form action=""><button class="py-2 px-4 bg-[#E85D26] text-white rounded-xl"><i class="fa-solid fa-qrcode"></i> Generate Qr Code</button></form>
+        </div>
+        
+    </section>
+</section>

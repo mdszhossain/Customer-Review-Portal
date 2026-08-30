@@ -58,6 +58,7 @@ const reviewerRouter = require("./routes/reviewerRouter");
 const adminRouter = require("./routes/adminRouter");
 const userRouter = require("./routes/userRouter");
 const shopRouter = require("./routes/shopRouter");
+const reviewRouter = require("./routes/reviewRouter");
 
 
 // using routes
@@ -65,6 +66,7 @@ app.use("/crp", reviewerRouter);
 app.use("/crp", adminRouter);
 app.use("/crp", userRouter);
 app.use("/crp", shopRouter);
+app.use("/crp", reviewRouter);
 
 
 
