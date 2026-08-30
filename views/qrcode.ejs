@@ -1,0 +1,22 @@
+<%- layout("./layout/boilerplate.ejs") %>
+<%- include("./includes/navbar.ejs") %>
+
+<section class="bg-[#FFFAF7] min-h-screen py-12">
+    <div class="max-w-xl mx-auto bg-white rounded-2xl shadow-lg p-8 text-center">
+        <p class="text-sm uppercase tracking-[0.2em] text-[#E85D26] font-semibold">Review Link</p>
+        <h2 class="text-3xl font-bold mt-3 text-gray-800">Scan QR Code</h2>
+
+        <% if (qrDataUrl) { %>
+            <div class="mt-8 flex justify-center bg-white p-4 rounded-xl shadow-md inline-block">
+                <img src="<%= qrDataUrl %>" alt="Review form QR code" class="w-64 h-64 object-contain" />
+            </div>
+        <% } else { %>
+            <p class="mt-8 text-red-500">QR code not generated.</p>
+        <% } %>
+
+        <p class="mt-8 text-gray-600">Open the review form using this link:</p>
+        <a href="<%= reviewUrl %>" class="mt-3 inline-block text-[#E85D26] font-medium break-all">
+            <%= reviewUrl %>
+        </a>
+    </div>
+</section>

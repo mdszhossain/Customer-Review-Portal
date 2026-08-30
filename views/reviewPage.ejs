@@ -11,7 +11,7 @@
                     <p class="text-sm"><%= shop.shoplocation %></p>
                 </div>
             </div>
-            <form action=""><button class="py-2 px-4 bg-[#E85D26] text-white rounded-xl"><i class="fa-solid fa-qrcode"></i> Generate QR Code</button></form>
+            <form action="/crp/<%= shop._id %>/qrcode" method="GET"><button class="py-2 px-4 bg-[#E85D26] text-white rounded-xl"><i class="fa-solid fa-qrcode"></i> Generate QR Code</button></form>
         </div>
     </section>
 

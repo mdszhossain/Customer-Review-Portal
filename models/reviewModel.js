@@ -6,6 +6,7 @@ const reviewSchema = new Schema({
   message: { type: String, required: true },
   customerName: { type: String, required: true },
   phone: { type: String, required: true },
+  shopId: {type: mongoose.Schema.Types.ObjectId, ref: "Shop"},
 });
 
 const Review = mongoose.model("Review", reviewSchema);
