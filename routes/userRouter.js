@@ -16,5 +16,6 @@ router.post(
   wrapAsync(userController.signinUser),
 );
 router.get("/signinError", wrapAsync(userController.signinError));
+router.post("/signout", wrapAsync(userController.signoutUser));
 
 module.exports = router;

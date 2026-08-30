@@ -1,8 +1,21 @@
 <%- layout("./layout/boilerplate.ejs") %> <%-
 include("../views/includes/navbar.ejs") %>
-<section>
+<section class="bg-[#FFFAF7] h-screen">
   <div class="w-11/12 m-auto p-6">
-    <h2 class="text-2xl font-bold">My Shops</h2>
-    <p><span>4</span> Total Locations</p>
+    <h2 class="text-2xl font-bold">Hello <%= user.fullName %></h2>
+    <p>Total Shops: <span><%= shops.length %></span></p>
+  </div>
+  <div class="w-11/12 m-auto p-6 grid sm:grid-cols-2 2xl:grid-cols-4 gap-5">
+    <% for(let shop of shops) { %>
+      <div class="shop-card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-bold"><%= shop.shopname %></h2>
+        <p class="text-sm">Location: <%= shop.shoplocation %></p>
+        <div class="flex justify-between">
+          <form action="/crp/<%= shop._id %>/reviews" method="GET"><button class="bg-[#E85D26] py-2 px-6 text-white rounded-md mt-5">Open Shop</button></form>
+          <form action="deleteShop/<%= shop._id %>?_method=DELETE" method="POST"><button class="text-white bg-red-500 rounded-md mt-5 px-2 py-2"><i class="fa-solid fa-trash-can"></i></button></form>
+        </div>
+      </div>
+    <% } %>
+    
   </div>
 </section>

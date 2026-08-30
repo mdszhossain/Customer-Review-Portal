@@ -24,6 +24,7 @@ app.use(express.static(path.join(__dirname, "public/js")));
 app.use(express.urlencoded({ extended: true }));
 app.engine("ejs", ejsEngine);
 app.use(express.json());
+app.use(methodOverride("_method"));
 app.use(
   session({
     secret: process.env.SESSION_SECRET_KEY,
@@ -47,16 +48,23 @@ passport.deserializeUser(User.deserializeUser());
 // db connection
 connectDB();
 
+app.use((req, res, next) => {
+  res.locals.user = req.user;
+  next();
+})
+
 // routes
 const reviewerRouter = require("./routes/reviewerRouter");
 const adminRouter = require("./routes/adminRouter");
 const userRouter = require("./routes/userRouter");
+const shopRouter = require("./routes/shopRouter");
 
 
 // using routes
 app.use("/crp", reviewerRouter);
 app.use("/crp", adminRouter);
 app.use("/crp", userRouter);
+app.use("/crp", shopRouter);
 
 
 

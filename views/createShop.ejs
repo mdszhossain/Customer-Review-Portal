@@ -1,0 +1,23 @@
+<%- layout("./layout/boilerplate.ejs") %>
+<%- include("../views/includes/navbar.ejs") %>
+<section>
+    <div class="h-screen bg-[#341C13] flex justify-center items-center">
+        <form action="/crp/createShop" method="POST" class="auth-outerform w-150 bg-[#FFFAF7] rounded-xl">
+            <div>
+                <div class="text-[#E85D26] font-bold text-center mt-5 text-xl"><i class="fa-brands fa-yelp"></i>C-R-P</div>
+                <div class="text-center text-md mb-5">Customer Review Admin Portal</div>
+            </div>
+            <div class="auth-innerdiv w-7/12 m-auto">
+                <div class="mb-3">
+                    <label for="shopname"><b>Shop Name</b></label> <br>
+                    <input class="auth-input bg-[#F9F5F2] w-full p-2 rounded-md" type="text" name="shopname" id="shopname" placeholder="Enter Shop Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="shoplocation"><b>Shop Location</b></label> <br>
+                    <input class="auth-input bg-[#F9F5F2] w-full p-2 rounded-md" type="text" name="shoplocation" id="shoplocation" placeholder="Enter Shop Location" required>
+                </div>
+                <button class="w-full text-white bg-[#e85d26] p-2 rounded-xl mt-3 mb-5"><i class="fa-solid fa-shop"></i> Create Shop</button>
+            </div>
+        </form>
+    </div>
+</section>
